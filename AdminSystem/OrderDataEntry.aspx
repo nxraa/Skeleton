@@ -20,7 +20,7 @@
         <asp:TextBox ID="txtDeliveryType" runat="server" height="25px" style="z-index: 1; left: 150px; top: 71px; position: absolute"></asp:TextBox>
         <asp:Label ID="lblProductId" runat="server" style="z-index: 1; left: 24px; top: 132px; position: absolute" Text="Product Id" width="115px"></asp:Label>
         <asp:TextBox ID="txtProductId" runat="server" height="25px" style="z-index: 1; left: 150px; top: 129px; position: absolute"></asp:TextBox>
-        <asp:Label ID="lblQuantity" runat="server" style="z-index: 1; left: 24px; top: 180px; position: absolute; margin-top: 0px" Text="Quantity" width="115px"></asp:Label>
+        <asp:Label ID="lblQuantity" runat="server" style="z-index: 1; left: 24px; top: 179px; position: absolute; margin-top: 0px" Text="Quantity" width="115px"></asp:Label>
         <asp:TextBox ID="txtQuantity" runat="server" height="25px" style="z-index: 1; left: 150px; top: 178px; position: absolute"></asp:TextBox>
         <asp:Label ID="lblOrderDate" runat="server" style="z-index: 1; left: 24px; top: 232px; position: absolute" Text="Order Date" width="115px"></asp:Label>
         <asp:TextBox ID="txtOrderDate" runat="server" height="25px" style="z-index: 1; left: 150px; top: 232px; position: absolute"></asp:TextBox>
