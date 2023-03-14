@@ -91,14 +91,20 @@ namespace ClassLibrary
 
         public bool Find(int productId)
         {
-            mProductId = 21;
-            mDateAdded = Convert.ToDateTime(1 / 01 / 2023);
-            mAvailableInStore = true;
-            mStockLevel = 21;
-            mName = "Iphone";
-            mDescription = "new iphone";
-            mPrice = 900;
-            return true;
+            clsDataConnection DB = new clsDataConnection();
+            DB.AddParameter("@ProductId", productId);
+            DB.Execute("sproc_tblAddress_FilterByProductId");
+            if (DB.Count == 1) 
+            {
+                mProductId = Convert.ToInt32(DB.DataTable.Rows[0]["ProductId"]);
+                mDateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["DateAdded"]);
+                mAvailableInStore = Convert.ToBoolean(DB.DataTable.Rows[0]["AvailableInStore"]);
+                mStockLevel = Convert.ToInt32(DB.DataTable.Rows[0]["StockLevel"]);
+                mName = Convert.ToString(DB.DataTable.Rows[0]["Name"]);
+                mDescription = Convert.ToString(DB.DataTable.Rows[0]["Description"]);
+                mPrice = Convert.ToInt32(DB.DataTable.Rows[0]["ProductId"]);
+                return true;
+            }
         }
     }
 }
