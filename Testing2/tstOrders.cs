@@ -25,7 +25,7 @@ namespace Testing2
             //assign the data to the proterty
             AnOrders.Active = TestData;
             //test to see that the two values are the same
-            Assert.AreEqual(AnOrders.Active, TestData);
+            Assert.AreEqual(AnOrders.Completed, TestData);
         }
         [TestMethod]
         public void OrderDatePropertyOK()
@@ -37,7 +37,7 @@ namespace Testing2
             //assign the data to the property
             AnOrders.DateAdded = TestData;
             //test to see that the two values are the same
-            Assert.AreEqual(AnOrders.DateAdded, TestData);
+            Assert.AreEqual(AnOrders.Date, TestData);
         }
 
         [TestMethod]
@@ -61,9 +61,9 @@ namespace Testing2
             //create some test data to assign to the property
             Int32 TestData = 1;
             //assign the data to the property
-            AnOrders.ProductNo = TestData;
+            AnOrders.ProductId = TestData;
             //test to see that the two values are the same
-            Assert.AreEqual(AnOrders.ProductNo, TestData);
+            Assert.AreEqual(AnOrders.ProductId, TestData);
         }
 
         [TestMethod]
